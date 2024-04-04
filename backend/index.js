@@ -3,9 +3,17 @@ const sequelize = require('./database');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const cookieParser = require("cookie-parser");
 const app = express();
 
-app.use(cors())
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
+
+app.use(cookieParser());
 const path = require("path")
 const routers = require('./routes/route')
 const port = process.env.PORT

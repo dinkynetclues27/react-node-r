@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Registration from './registerform';
+import Login from './loginform';
+import Booktable from './bookfetch';
 
 function App() {
   return (
@@ -21,7 +24,15 @@ function App() {
     //   </header>
     // </div>
     <div>
-      <Registration/>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/register" element={<Registration />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/bookget" element = {<Booktable/>} />
+      </Routes>
+    </BrowserRouter>
+      {/* <Registration/> */}
+      {/* <Login /> */}
     </div>
   );
 }

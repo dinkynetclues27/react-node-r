@@ -101,7 +101,7 @@ const MyFormComponent = () => {
             setSubmittedData(data); 
             setFormSubmitted(true);
             setFormData({ name: '', contact_no: '', password: '', email: '',address:'',profilePicture:'' });
-          
+            window.location.href='/login'
             // toast.success('Data inserted successfully!', { autoClose: 5000 });
           } else if (xhr.status === 409) { 
             // console.error("error")
