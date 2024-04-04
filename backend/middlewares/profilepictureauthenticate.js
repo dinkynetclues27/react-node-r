@@ -1,5 +1,5 @@
-const multer = require("multer");
 const path = require("path");
+const multer = require("multer");
 
 const storageConfig = multer.diskStorage({
   destination: "./public/assets",
@@ -17,7 +17,7 @@ const profilepictureauthenticate = multer({
   fileFilter: function (request, uploadedFile, callback) {
     checkFileType(uploadedFile, callback);
   },
-}).single("profilePicture");
+}).single("profilePicture"); 
 
 
 function checkFileType(uploadedFile, callback) {

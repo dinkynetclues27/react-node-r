@@ -5,6 +5,7 @@ const profilepictureauthenticate = require('../middlewares/profilepictureauthent
 
 const registerdata = async(req,res)=>{
     try{
+        console.log("registered data called")
         await profilepictureauthenticate(req, res, async function (err) {
             if (err) {
                 return res.status(400).json({ error: err });
